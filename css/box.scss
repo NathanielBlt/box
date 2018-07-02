@@ -1,0 +1,351 @@
+// compileCompressed: box.css
+
+* { padding: 0; margin: 0; /*box-sizing: content-box;*/}
+
+@charset "UTF-8";
+
+@viewport {
+   width: device-width; /* largeur du viewport */
+   zoom: 1; /* zoom initial à 1.0 (et clin d'oeil aux fans d'IE6/7) */
+}
+
+/* Variables */
+
+$corner-size: 8vh; // 5vh
+
+/* Mixins */
+
+
+
+
+/*******Points de rupture *******/
+
+// Smartphone
+@media screen and (max-width:768px) {}
+
+// Smartphone + Tablette
+@media screen and (max-width:1024px) {}
+
+// Desktop
+@media screen and (min-width:1024px) {}
+
+/* -------------------------------- */
+
+html{
+  height: 100vh;
+  width: 100vw;
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // min-height: 100vh; IE Fix : utiliser height
+    height: 100vh;
+    width: 100vw;
+    background: url("../img/fondpage.jpg");
+    background-size: 100% 100%;
+    /* overflow: hidden; */
+}
+
+button {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    background-color:transparent;
+    border:none;
+}
+
+/****** BordsBoite *******/
+
+.bord-haut, .bord-bas { display:flex; width:100%; flex-flow: row nowrap; justify-content: space-between; background-repeat:no-repeat, no-repeat, round; background-position: left, right, top ; background-size: auto $corner-size, auto $corner-size, auto;}
+      .bord-haut-gauche, .bord-bas-gauche { width:$corner-size; height: $corner-size; background-size: cover;}
+      .bord-haut-droite, .bord-bas-droite { width:$corner-size; height: $corner-size;}
+
+.bord-haut {background-image:  url("../img/_norepeat_topleft.png"), url("../img/_norepeat_topright.png"), url("../img/_repeat_top.jpeg");}
+.bord-bas {background-image: url("../img/_norepeat_bottomleft.png"), url("../img/_norepeat_bottomright.png"),url("../img/_repeat_bottom.jpeg"); }
+
+.bord-haut-gauche {background-image: url("../img/_corner_topleft.png"); background-size: 100% 100%;}
+.bord-haut-droite {background-image: url("../img/_corner_topright.png"); background-size: 100% 100%;}
+.bord-bas-gauche {background-image: url("../img/_corner_bottomleft.png"); background-size: 100% 100%;}
+.bord-bas-droite {background-image: url("../img/_corner_bottomright.png"); background-size: 100% 100%;}
+
+.box { background-image: url("../img/_norepeat_topleft2.png"),url("../img/_norepeat_topright2.png"),url("../img/_repeat_left.jpeg"),url("../img/_repeat_right.jpeg"), url("../img/_repeat_box.jpeg") ; background-position: top left, top right, left, right,center; background-repeat: no-repeat, no-repeat, repeat-y, repeat-y, round; background-size: $corner-size auto, $corner-size auto, $corner-size, $corner-size, $corner-size*2 ;}
+
+ // .bord-gauche { display:block; height:100%; background-color: yellow; width: 5em;}
+
+/****** Box *******/
+
+// Rajouter des textures de fond qui se répètent pour les bords.
+
+// Smartphone
+@media screen and (max-width:768px) {
+  .box {
+    max-width:none; // La boîte prend toute la fenêtre disponible
+  }
+}
+
+// Smartphone + Tablette
+@media screen and (max-width:1024px) {
+  .box {
+    max-width:none; // La boîte prend toute la fenêtre disponible
+  }
+}
+
+// Desktop
+@media screen and (min-width:1024px) {
+  .box {
+    /*max-width:100vh;*/ // La boîte est au milieu de l'écran
+     max-width: 130vh;
+
+  }
+}
+
+
+.box {
+  margin: 0 auto;
+  position:relative;
+}
+
+.flex {
+  margin-left: $corner-size;
+  margin-right:$corner-size;
+}
+
+.flex > * { flex: 1 100%; }
+
+.item button { position: absolute; z-index: 10; font-size:1.5em;}
+
+/* ---------------*/
+// Box Points de rupture des grands blocs : flextop, flexbottom puis flexleft et flexright
+/* ----------------*/
+
+// Smartphone
+@media screen and (max-width:768px) {
+  body { justify-content:flex-start;}
+  .box {
+  }
+
+  .flextop {flex-flow: column wrap;}
+        .item-couvert { flex:1; }
+        .item-lampe { flex: 1; }
+        .item-cube { flex: 1; }
+  .flexbottom {flex-flow: column nowrap;}
+  .flexleft {}
+  .flexright {}
+}
+
+// Smartphone + Tablette
+@media screen and (max-width:1024px) {
+  // .flextop {flex-flow: column wrap;}
+  // .flexbottom {}
+  // .flexleft {}
+  // .flexright {}
+}
+
+// Desktop
+@media screen and (min-width:1024px) {
+  .flextop {flex-flow: row wrap;}
+  .flexbottom {}
+  .flexleft {}
+  .flexright {}
+}
+
+
+/* ----------------*/
+// Box top
+
+.flextop {
+  display: flex;
+  // flex-flow: row wrap;
+  // background-color:red;
+  align-content: center;
+  justify-content: center;}
+
+.flextop > * {  }
+      .item-couvert { flex:2;  } .item-couvert button { bottom: 0;}
+      .item-lampe { flex: 2; }
+      .item-cube { flex: 1 }
+
+// Box bottom avec left center et right dedans
+
+.flexbottom { display:flex; flex: 2;}
+
+// Box gauche
+
+.flexleft {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
+  flex: 2;
+}
+
+.flexleft > .item {  }
+
+      .item-passpass { flex-basis: 50%; }
+      .item-clef {flex-basis: 50%;}
+      .item-boussole {flex-basis: 60%;}
+      .item-canif {flex-basis: 40%;}
+
+// Box centre
+
+.flexcenter {
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 1;
+  flex-basis: 15%;
+}
+
+      .item-carnet {flex: 3;}
+      .carnet-onglets { display:flex; flex-direction:column; wrap: nowrap; flex:1; align-self: center;}
+          .carnet-onglets .item { flex: 0; }
+
+// Box right
+
+.flexright {
+  display: flex;
+  flex: 1;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.item-trousse { flex: 1; flex-shrink:0;  }
+.item-ri {flex: 0; padding: 1em;}
+
+// Responsive image
+
+ .imgResponsive { max-width:100%; }
+
+// ---------------
+
+.assistive-text { height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px; }
+
+// ---------------
+
+.item img { position:relative; display: block; }
+.item {position:relative; align-self:center;}
+
+// couvercle
+
+#ctnCouvercle>img{
+    width:100%;
+    height: 100%;
+
+}
+
+#ctnCouvercle{
+    position:absolute;
+    top:0;
+    z-index:999;
+    transform-style: preserve-3d; /* Nécessaire pour transformer tous les enfants */
+    cursor:pointer;
+}
+
+// Variante comportement écran
+
+// Smartphone
+@media screen and (max-width:768px) {
+  #ctnCouvercle{
+      height: 100vh;
+      width: 100vw;
+  }
+}
+
+// Smartphone + Tablette
+@media screen and (max-width:1024px) {
+  #ctnCouvercle{
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+// Desktop
+@media screen and (min-width:1024px) {
+  #ctnCouvercle{
+      height: 100%;
+      width: 100%;
+  }
+}
+
+/* -------- */
+
+.couvercleTop {
+  position:absolute;
+  top:0; left:0; bottom:0;right:0;
+  background: url("../img/couvercle.jpg");
+  background-size: 100% 100%;
+}
+
+// .couvercleTop img{
+// width: 100%;
+// }
+
+.couvercleBord img {
+  width: 100%;
+}
+
+.couvercleFerme{ /* Position de base des éléments */
+  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -moz-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -webkit-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -o-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  -ms-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  perspective: 3500px;-webkit-perspective: 3500px; perspective-origin: 80% 80%; -webkit-perspective-origin: 80% 80%;
+    /*display: none;*/
+}
+
+
+.couvercleOuvert{
+    animation : ouvre3D 2s ease 0s 1 forwards;
+}
+
+$translate: 10px; //old: -39px;
+
+.couvercleBord {
+position:absolute;
+bottom: 0;
+width:100%;
+
+ transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(-90deg) translateX(0px) translateZ( $translate ) translateY(50%);
+  -moz-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(-90deg) translateX(0px) translateZ( $translate ) translateY(50%);
+  -webkit-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(-90deg) translateX(0px) translateZ( $translate)translateY(50%);
+  -o-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(-90deg) translateX(0px) translateZ( $translate )translateY(50%);
+  -ms-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(-90deg) translateX(0px) translateZ( $translate )translateY(50%);
+}
+
+.couvercleBordAnim {
+ animation: DecalBord 2s ease 0s 1 forwards;
+}
+
+
+
+
+@keyframes ouvre3D {
+    0%{
+        transform-origin:top;
+        transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        -moz-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        -webkit-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        -o-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        -ms-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+    100%{
+
+        transform-origin:top;
+        transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+        -moz-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+        -webkit-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+        -o-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+        -ms-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+}
+}
+
+
+
+
+// Fade in image
