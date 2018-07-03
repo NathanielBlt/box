@@ -10,6 +10,7 @@ modal accessible cf : http://scottaohara.github.io/accessible_modal_window/index
   <title>La box de rentrée - SHS - Université de Lille</title>
   <link rel="icon" type="image/x-icon" href="boussole.ico" />
   <link rel="stylesheet" href="css/box.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" media="all">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;subset=latin-ext" rel="stylesheet">
 
 </head>
@@ -32,47 +33,40 @@ modal accessible cf : http://scottaohara.github.io/accessible_modal_window/index
       <div class="bord-haut-droite"></div>
     </div>
 
-    <div class="flex">
+    <div id="ctnBox" class="flex">
       <div class="flextop">
-        <div class="item item-couvert img-hover">
+        <div id="item-couvert" class="item item-couvert img-hover">
           <img src="img/couverts.png" role="button" data-modal-open="#first" class="imgResponsive" alt="se restaurer"><span class="assistive-text">Se restaurer</span>
         </div>
-        <div class="item item-lampe img-hover"><img src="img/lampe.png" class="imgResponsive" alt="Éclairage sur"><span class="assistive-text">Éclairage sur...</span></div>
-        <div class="item item-cube img-hover"><img src="img/cube.png" class="imgResponsive" alt="Vie étudiante"><span class="assistive-text">Vie étudiante</span></div>
+        <div id="item-lampe" class="item item-lampe img-hover"><img src="img/lampe.png" class="imgResponsive" alt="Éclairage sur"><span class="assistive-text">Éclairage sur...</span></div>
+        <div id="item-cube" class="item item-cube img-hover"><img src="img/cube.png" class="imgResponsive" alt="Vie étudiante"><span class="assistive-text">Vie étudiante</span></div>
       </div>
       <div class="flexbottom">
 
-        <div id="#first" data-modal>
-          <h1>
-                                      A descriptive title for the dialog
-                                    </h1>
-          <div>
-            <!-- primary content of the dialog here -->
-          </div>
-        </div>
+
 
         <div class="flexleft">
-          <div class="item item-passpass img-hover"><img src="img/passpass.png" class="imgResponsive" alt="Se déplacer" /><span class="assistive-text">Se déplacer</span></div>
-          <div class="item item-clef img-hover"><img src="img/clef.png" class="imgResponsive" alt="Docs et contacts" /><span class="assistive-text">Docs & Contacts</span></div>
-          <div class="item item-boussole img-hover"><img src="img/boussole.png" class="imgResponsive" alt="Se repérer sur les campus" /><span class="assistive-text">Se repérer sur les campus</span></div>
-          <div class="item item-canif img-hover"><img src="img/canif.png" class="imgResponsive" alt="Services ressources" /><span class="assistive-text">Services ressources</span></div>
+          <div id="item-passpass" class="item item-passpass img-hover"><img src="img/passpass.png" class="imgResponsive" alt="Se déplacer" /><span class="assistive-text">Se déplacer</span></div>
+          <div id="item-clef" class="item item-clef img-hover"><img src="img/clef.png" class="imgResponsive" alt="Docs et contacts" /><span class="assistive-text">Docs & Contacts</span></div>
+          <div id="item-boussole" class="item item-boussole img-hover"><img src="img/boussole.png" class="imgResponsive" alt="Se repérer sur les campus" /><span class="assistive-text">Se repérer sur les campus</span></div>
+          <div id="item-canif" class="item item-canif img-hover"><img src="img/canif.png" class="imgResponsive" alt="Services ressources" /><span class="assistive-text">Services ressources</span></div>
         </div>
 
         <div class="flexcenter">
-          <div class="item item-carnet img-hover"><img src="img/carnet.png" class="imgResponsive" alt="Orientation" /><span class="assistive-text">Orientation</span></div>
+          <div id="item-carnet" class="item item-carnet img-hover"><img src="img/carnet.png" class="imgResponsive" alt="Orientation" /><span class="assistive-text">Orientation</span></div>
 
           <div class="carnet-onglets">
-            <div class="item item-calendrier img-hover"><img src="img/onglet_calendrier.png" class="imgResponsive" alt="calendrier" /><span class="assistive-text">Onglet calendrier</span></div>
-            <div class="item item-organisation img-hover"><img src="img/onglet_organisation.png" class="imgResponsive" alt="organisation" /><span class="assistive-text">Onglet organisation</span></div>
-            <div class="item item-examens img-hover"><img src="img/onglet_examen.png" class="imgResponsive" alt="examens" /><span class="assistive-text">Onglet examens</span></div>
-            <div class="item item-espaces img-hover"><img src="img/onglet_espace.png" class="imgResponsive" alt="Espaces de travail" /><span class="assistive-text">Onglet Espaces de travail</span></div>
-            <div class="item item-accompagnement img-hover"><img src="img/onglet_accompagnement.png" class="imgResponsive" alt="Accompagnement" /><span class="assistive-text">Onglet Accompagnement</span></div>
+            <div id="item-calendrier" class="item item-calendrier img-hover"><img src="img/onglet_calendrier.png" class="imgResponsive" alt="calendrier" /><span class="assistive-text">Onglet calendrier</span></div>
+            <div id="item-organisation" class="item item-organisation img-hover"><img src="img/onglet_organisation.png" class="imgResponsive" alt="organisation" /><span class="assistive-text">Onglet organisation</span></div>
+            <div id="item-examens" class="item item-examens img-hover"><img src="img/onglet_examen.png" class="imgResponsive" alt="examens" /><span class="assistive-text">Onglet examens</span></div>
+            <div id="item-espaces" class="item item-espaces img-hover"><img src="img/onglet_espace.png" class="imgResponsive" alt="Espaces de travail" /><span class="assistive-text">Onglet Espaces de travail</span></div>
+            <div id="item-accompagnement" class="item item-accompagnement img-hover"><img src="img/onglet_accompagnement.png" class="imgResponsive" alt="Accompagnement" /><span class="assistive-text">Onglet Accompagnement</span></div>
           </div>
         </div>
 
         <div class="flexright">
-          <div class="item item-trousse img-hover"><img src="img/trousse.png" class="imgResponsive" alt="Trouver de l'aide" /><span class="assistive-text">Trouver de l'aide</span></div>
-          <div class="item item-ri img-hover"><img src="img/sphere.png" class="imgResponsive" alt="Étudiants internationaux" /><span class="assistive-text">Étudiants internationaux</span></div>
+          <div id="item-trousse" class="item item-trousse img-hover"><img src="img/trousse.png" class="imgResponsive" alt="Trouver de l'aide" /><span class="assistive-text">Trouver de l'aide</span></div>
+          <div id="item-ri" class="item item-ri img-hover"><img src="img/sphere.png" class="imgResponsive" alt="Étudiants internationaux" /><span class="assistive-text">Étudiants internationaux</span></div>
         </div>
 
       </div>
@@ -87,21 +81,27 @@ modal accessible cf : http://scottaohara.github.io/accessible_modal_window/index
     </div>
   </div>
 
+  <div id="ctnModal">
+    
+  </div>
 
 
 
   <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/modal.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
 
   <script type="text/javascript">
     // Force retour en haut au refresh
-    $(document).ready(function() {
-      $(this).scrollTop(0);
-    });
+    //**** JY ce qui suit est déplacer dans fonction suiv !
+    // $(document).ready(function() {
+    //   $(this).scrollTop(0);
+    // });
 
     // Code pour le hover img
 
     $(document).ready(function() {
+      $(this).scrollTop(0);
+
       $('.img-hover img').hover(function() {
         $(this).attr('src', function(index, attr) {
           return attr.replace('.png', '_hover.png');
@@ -111,6 +111,32 @@ modal accessible cf : http://scottaohara.github.io/accessible_modal_window/index
           return attr.replace('_hover.png', '.png');
         });
       });
+
+      //**** JY : mise en place de la modal
+      $("#ctnModal").dialog({
+        autoOpen: false,
+        width : $('#ctnBox').width(),
+        maxHeight: $('#ctnBox').height(),
+        modal: true,
+        draggable: false,
+        position:{my : "center top" , at : "center top" , of: "#ctnBox"}
+      });
+
+      //***** JY : pour fermer la modal si on redim la fenetre
+     window.addEventListener("resize", function(){
+       $("#ctnModal").dialog("close");
+       $("#ctnModal").dialog("option","maxHeight" ,$('#ctnBox').height() );
+       $("#ctnModal").dialog("option","width" ,$('#ctnBox').width() );
+     });
+
+      //**** JY : ecouteur pour onclick item
+      $(".item").click(function(e) {
+        var objet = e.currentTarget.id.split("-")[1];
+        $("#ctnModal").load("infos/" + objet + ".html");
+        $("#ctnModal").dialog("open");
+      })
+
+
     });
 
     // Code pour l'ouverture de page
