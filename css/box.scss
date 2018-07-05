@@ -234,7 +234,6 @@ button {
 #ctnCouvercle>img{
     width:100%;
     height: 100%;
-
 }
 
 #ctnCouvercle{
@@ -276,13 +275,80 @@ button {
 .couvercleTop {
   position:absolute;
   top:0; left:0; bottom:0;right:0;
-  background: url("../img/couvercle.jpg");
-  background-size: 100% 100%;
 }
 
-// .couvercleTop img{
-// width: 100%;
-// }
+/* --------- Changement titre + image couvercle */
+
+// Smartphone + Tablette
+@media screen and (max-width:1024px) {
+  .couvercleTop {
+    background: url("../img/couvercle_mobile.jpg");
+    background-size: 100% 100%;
+  }
+
+  .couvercleTitre {
+    z-index: 10000;
+    position: absolute;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+    color: white;
+    font-weight:bold;
+    font-size: 2.5rem;
+    white-space:nowrap;
+     text-shadow: 2px 2px 4px #000000;
+  }
+
+  .couvercleSousTitre {
+    z-index: 10000;
+    position: absolute;
+    margin-top:2rem;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+    color: white;
+    font-size: 1.2rem;
+    white-space:nowrap;
+     text-shadow: 2px 2px 4px #000000;
+  }
+}
+
+// Desktop
+@media screen and (min-width:1024px) {
+  .couvercleTop {
+    background: url("../img/couvercle_desktop.jpg");
+    background-size: 100% 100%;
+  }
+
+  .couvercleTitre {
+    z-index: 10000;
+    position: absolute;
+    top: 45%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+    color: white;
+    font-weight:bold;
+    font-size: 10rem;
+    white-space:nowrap;
+     text-shadow: 2px 2px 4px #000000;
+  }
+
+  .couvercleSousTitre {
+    z-index: 10000;
+    position: absolute;
+    margin-top:5rem;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+    color: white;
+    font-size: 4.7rem;
+    white-space:nowrap;
+     text-shadow: 2px 2px 4px #000000;
+  }
+
+}
+
+/* -----------------------------------------------*/
 
 .couvercleBord img {
   width: 100%;

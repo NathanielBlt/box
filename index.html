@@ -2,7 +2,7 @@
 <!--
 modal accessible cf : http://scottaohara.github.io/accessible_modal_window/index.html
 -->
-<html>
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
@@ -22,8 +22,9 @@ modal accessible cf : http://scottaohara.github.io/accessible_modal_window/index
   <div class="box">
 
     <div id="ctnCouvercle" class="couvercleFerme" onclick="this.className='couvercleOuvert';">
-      <div class="couvercleTop">
-        <!--<img src="img/couvercle.jpg" />--></div>
+      <div class="couvercleTop"></div>
+      <span class="couvercleTitre">Box de rentrée</span>
+      <span class="couvercleSousTitre">Kit de survie des nouveaux étudiants !</span>
       <div class="couvercleBord"><img src="img/bord_couvercle.png" /></div>
     </div>
 
@@ -82,7 +83,7 @@ modal accessible cf : http://scottaohara.github.io/accessible_modal_window/index
   </div>
 
   <div id="ctnModal">
-    
+
   </div>
 
 
@@ -116,7 +117,7 @@ modal accessible cf : http://scottaohara.github.io/accessible_modal_window/index
       $("#ctnModal").dialog({
         autoOpen: false,
         width : $('#ctnBox').width(),
-        maxHeight: $('#ctnBox').height(),
+        height: $('#ctnBox').height(), // Ancien : maxHeight: $('#ctnBox').height(),
         modal: true,
         draggable: false,
         position:{my : "center top" , at : "center top" , of: "#ctnBox"}
