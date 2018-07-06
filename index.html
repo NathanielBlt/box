@@ -103,6 +103,10 @@ modal accessible cf : http://scottaohara.github.io/accessible_modal_window/index
     $(document).ready(function() {
       $(this).scrollTop(0);
 
+      $("#ctnCouvercle").click(function(){
+        $('body').css('overflow','auto');
+      });
+
       $('.img-hover img').hover(function() {
         $(this).attr('src', function(index, attr) {
           return attr.replace('.png', '_hover.png');
@@ -116,18 +120,18 @@ modal accessible cf : http://scottaohara.github.io/accessible_modal_window/index
       //**** JY : mise en place de la modal
       $("#ctnModal").dialog({
         autoOpen: false,
-        width : $('body').width(),
-        height: $('body').height(), // Ancien : maxHeight: $('#ctnBox').height(),
+        width : $('.box').width(),
+        maxHeight: $('#ctnBox').height(), // Ancien : maxHeight: $('#ctnBox').height(),
         modal: true,
         draggable: false,
-        position:{my : "center top" , at : "center top" , of: "body"}
+        position:{my : "center top" , at : "center top" , of: ".box"},
       });
 
       //***** JY : pour fermer la modal si on redim la fenetre
      window.addEventListener("resize", function(){
        $("#ctnModal").dialog("close");
-       $("#ctnModal").dialog("option","maxHeight" ,$('body').height() );
-       $("#ctnModal").dialog("option","width" ,$('body').width() );
+       $("#ctnModal").dialog("option","maxHeight" ,$('.box').height() );
+       $("#ctnModal").dialog("option","width" ,$('.box').width() );
      });
 
       //**** JY : ecouteur pour onclick item
@@ -135,7 +139,16 @@ modal accessible cf : http://scottaohara.github.io/accessible_modal_window/index
         var objet = e.currentTarget.id.split("-")[1];
         $("#ctnModal").load("infos/" + objet + ".html");
         $("#ctnModal").dialog("open");
+        $('body').css('overflow','hidden'); // NB : enlève le scroll quand modal ouverte
       })
+
+
+      // scroll
+      $('#ctnModal').on('dialogclose', function(ding) {
+          $('body').css('overflow','auto');
+     });
+
+
 
       // Clic en dehors de la fenêtre
         // $('body').on('click','.ui-widget-overlay',function(){ $('#ctnModal').dialog('close'); });

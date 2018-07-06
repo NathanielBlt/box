@@ -48,7 +48,7 @@ body {
     width: 100vw;
     background: url("../img/fondpage.jpg");
     background-size: 100% 100%;
-    /* overflow: hidden; */
+    overflow: hidden; // Pour empêcher le scroll avant l'ouverture du couvercle. Retiré via Jquery
 }
 
 button {
@@ -143,6 +143,7 @@ button {
   // .flexbottom {}
   // .flexleft {}
   // .flexright {}
+  .item-cube { padding: 0 3rem; }
 }
 
 // Desktop
@@ -151,6 +152,8 @@ button {
   .flexbottom {}
   .flexleft {}
   .flexright {}
+
+  .item-cube { padding: 0;}
 }
 
 
@@ -228,6 +231,11 @@ button {
 
 .item img { position:relative; display: block; }
 .item {position:relative; align-self:center;}
+
+// classe à ajouter/supprimer en javascript
+
+.scrollbarRemove { overflow:hidden;}
+
 
 // couvercle
 
