@@ -116,18 +116,18 @@ modal accessible cf : http://scottaohara.github.io/accessible_modal_window/index
       //**** JY : mise en place de la modal
       $("#ctnModal").dialog({
         autoOpen: false,
-        width : $('#ctnBox').width(),
-        height: $('#ctnBox').height(), // Ancien : maxHeight: $('#ctnBox').height(),
+        width : $('body').width(),
+        height: $('body').height(), // Ancien : maxHeight: $('#ctnBox').height(),
         modal: true,
         draggable: false,
-        position:{my : "center top" , at : "center top" , of: "#ctnBox"}
+        position:{my : "center top" , at : "center top" , of: "body"}
       });
 
       //***** JY : pour fermer la modal si on redim la fenetre
      window.addEventListener("resize", function(){
        $("#ctnModal").dialog("close");
-       $("#ctnModal").dialog("option","maxHeight" ,$('#ctnBox').height() );
-       $("#ctnModal").dialog("option","width" ,$('#ctnBox').width() );
+       $("#ctnModal").dialog("option","maxHeight" ,$('body').height() );
+       $("#ctnModal").dialog("option","width" ,$('body').width() );
      });
 
       //**** JY : ecouteur pour onclick item
@@ -136,6 +136,9 @@ modal accessible cf : http://scottaohara.github.io/accessible_modal_window/index
         $("#ctnModal").load("infos/" + objet + ".html");
         $("#ctnModal").dialog("open");
       })
+
+      // Clic en dehors de la fenêtre
+        // $('body').on('click','.ui-widget-overlay',function(){ $('#ctnModal').dialog('close'); });
 
 
     });
