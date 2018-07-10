@@ -16,11 +16,6 @@
   padding-top:  0 ;
 }
 
-/*body {
-  max-width: 1200px;
-  margin: 0 auto ;
-  padding:2em;
-}*/
 
 /* ---------important : FONTES */
 
@@ -115,7 +110,7 @@ ul, li {
    height: 0.5em;
    content:" ";
    margin-bottom: -0.5em;
-     border: 0 none;
+  border: 0 none;
 }
 
 /*-------------------------------*/
@@ -230,24 +225,53 @@ ul, li {
   justify-content:center;
 }
 
-.titreicone {
-  margin-right: 0.5em;
-  max-height:5em;
+/*-------------------------------*/
+
+// Smartphone + Tablette
+@media screen and (max-width:1024px) {
+
+  .titreicone {
+    margin: 0.5em 0.5em 0 0;
+    max-height:3em;
+    align-self: flex-start;
+  }
+
+  .titretexte > h1 {
+    font-size: 1.5em;
+    margin-bottom: -1em;
+  }
+
+  .titretexte > h2 {
+    font-size: 1.25em;
+    margin-bottom: 0em;
+  }
+
 }
+
+// Desktop
+@media screen and (min-width:1024px) {
+
+  .titreicone {
+    margin-right: 0.5em;
+    max-height:5em;
+  }
+
+  .titretexte > h1 {
+    font-size: 2.2em;
+    margin-bottom: -0.5em;
+  }
+
+  .titretexte > h2 {
+    font-size: 1.5em;
+    margin-bottom: 0em;
+  }
+}
+
 
 .titretext {
   flex-direction: column;
 }
 
-.titre h1 {
-  font-size: 2.2em;
-  margin-bottom: -0.5em;
-}
-
-.titre h2 {
-  font-size: 1.5em;
-  margin-bottom: 0em;
-}
 
 .titrehighlight {
   color:black;

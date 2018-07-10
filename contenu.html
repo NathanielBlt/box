@@ -102,21 +102,19 @@
     window.onclick = function(event) {
     if (event.target == document.getElementById("ctnModal")) {
         $("#ctnModal").css('display', 'none');
+        $('body').css('overflow', 'auto');  // Réactivation du scroll sur la page
     }}
 
     // When the user clicks on <button> (x), close the modal
     $("#close").click(function() {
       $("#ctnModal").css('display', 'none');
+      $('body').css('overflow', 'auto'); // Réactivation du scroll sur la page
     });
 
     $("#ctnCouvercle").click(function() {
       $('body').css('overflow', 'auto');
     });
 
-    // scroll
-    $('#ctnModal').on('dialogclose', function(ding) {
-      $('body').css('overflow', 'auto');
-    });
 
   });
 
