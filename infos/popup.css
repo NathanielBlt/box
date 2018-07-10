@@ -9,10 +9,10 @@
 /*renvoyé sur classe modal*/
 
 .modal{
-  background-image: url("img/TextureFond.jpg");
+  /* background-image: url("img/TextureFond.jpg"); */
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
-  line-height:1.5;
+  line-height: 1.5;
   padding-top:  0 ;
 }
 
