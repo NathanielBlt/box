@@ -1,0 +1,121 @@
+<div class="box" id="box">
+
+  <div id="ctnCouvercle" class="couvercleFerme" onclick="this.className='couvercleOuvert';">
+    <div class="couvercleTop"></div>
+    <span class="couvercleTitre">Box de rentrée</span>
+    <span class="couvercleSousTitre">Kit de survie des nouveaux étudiants !</span>
+    <div class="couvercleBord"><img src="img/bord_couvercle.png" /></div>
+  </div>
+
+  <div class="bord-haut">
+    <div class="bord-haut-gauche"></div>
+    <div class="bord-haut-droite"></div>
+  </div>
+
+  <div id="ctnBox" class="flex">
+    <div class="flextop">
+      <div id="item-couvert" class="item item-couvert img-hover">
+        <img src="img/couverts.png" role="button" class="imgResponsive" alt="se restaurer"><span class="assistive-text">Se restaurer</span>
+      </div>
+      <div id="item-lampe" class="item item-lampe img-hover"><img src="img/lampe.png" class="imgResponsive" alt="Éclairage sur"><span class="assistive-text">Éclairage sur...</span></div>
+      <div id="item-cube" class="item item-cube img-hover"><img src="img/cube.png" class="imgResponsive" alt="Vie étudiante"><span class="assistive-text">Vie étudiante</span></div>
+    </div>
+    <div class="flexbottom">
+
+      <div class="flexleft">
+        <div id="item-passpass" class="item item-passpass img-hover"><img src="img/passpass.png" class="imgResponsive" alt="Se déplacer" /><span class="assistive-text">Se déplacer</span></div>
+        <div id="item-clef" class="item item-clef img-hover"><img src="img/clef.png" class="imgResponsive" alt="Docs et contacts" /><span class="assistive-text">Docs & Contacts</span></div>
+        <div id="item-boussole" class="item item-boussole img-hover"><img src="img/boussole.png" class="imgResponsive" alt="Se repérer sur les campus" /><span class="assistive-text">Se repérer sur les campus</span></div>
+        <div id="item-canif" class="item item-canif img-hover"><img src="img/canif.png" class="imgResponsive" alt="Services ressources" /><span class="assistive-text">Services ressources</span></div>
+      </div>
+
+      <div class="flexcenter">
+        <div id="item-carnet" class="item item-carnet img-hover"><img src="img/carnet.png" class="imgResponsive" alt="Orientation" /><span class="assistive-text">Orientation</span></div>
+
+        <div class="carnet-onglets">
+          <div id="item-calendrier" class="item item-calendrier img-hover"><img src="img/onglet_calendrier.png" class="imgResponsive" alt="calendrier" /><span class="assistive-text">Onglet calendrier</span></div>
+          <div id="item-organisation" class="item item-organisation img-hover"><img src="img/onglet_organisation.png" class="imgResponsive" alt="organisation" /><span class="assistive-text">Onglet organisation</span></div>
+          <div id="item-examens" class="item item-examens img-hover"><img src="img/onglet_examen.png" class="imgResponsive" alt="examens" /><span class="assistive-text">Onglet examens</span></div>
+          <div id="item-espaces" class="item item-espaces img-hover"><img src="img/onglet_espace.png" class="imgResponsive" alt="Espaces de travail" /><span class="assistive-text">Onglet Espaces de travail</span></div>
+          <div id="item-accompagnement" class="item item-accompagnement img-hover"><img src="img/onglet_accompagnement.png" class="imgResponsive" alt="Accompagnement" /><span class="assistive-text">Onglet Accompagnement</span></div>
+        </div>
+      </div>
+
+      <div class="flexright">
+        <div id="item-trousse" class="item item-trousse img-hover"><img src="img/trousse.png" class="imgResponsive" alt="Trouver de l'aide" /><span class="assistive-text">Trouver de l'aide</span></div>
+        <div id="item-ri" class="item item-ri img-hover"><img src="img/sphere.png" class="imgResponsive" alt="Étudiants internationaux" /><span class="assistive-text">Étudiants internationaux</span></div>
+      </div>
+
+    </div>
+    <!-- FlexBottom fin -->
+
+  </div>
+
+  <div class="bord-bas">
+    <div class="bord-bas-gauche"></div>
+    <div class="bord-bas-milieu"></div>
+    <div class="bord-bas-droite"></div>
+  </div>
+
+
+</div>
+
+<!-- The Modal -->
+<div id="ctnModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <button id="close" title="Retour">&times;</button>
+    <div id="ctnContentModal">
+      <p>Some text in the Modal..</p>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  $(function() {
+
+      $(this).scrollTop(0); // Retour vers le haut de page au refresh
+
+    $('.img-hover img').hover(function() { // Fonction remplacement d'image au hover
+      $(this).attr('src', function(index, attr) {
+        return attr.replace('.png', '_hover.png');
+      });
+    }, function() {
+      $(this).attr('src', function(index, attr) {
+        return attr.replace('_hover.png', '.png');
+      });
+    });
+
+// ctnModal = l'ID de la modale complète
+// ctnContentModal = l'ID du contenu de la modale
+
+    //**** JY : ecouteur pour onclick item
+    $(".item").click(function(e) {
+      var objet = e.currentTarget.id.split("-")[1];
+      $("#ctnContentModal").load("infos/" + objet + ".html");
+      $("#ctnModal").css('display', 'block');
+      $('body').css('overflow', 'hidden'); // NB : enlève le scroll quand modal ouverte
+    })
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == document.getElementById("ctnModal")) {
+        $("#ctnModal").css('display', 'none');
+        $('body').css('overflow', 'auto');  // Réactivation du scroll sur la page
+    }}
+
+    // When the user clicks on <button> (x), close the modal
+    $("#close").click(function() {
+      $("#ctnModal").css('display', 'none');
+      $('body').css('overflow', 'auto'); // Réactivation du scroll sur la page
+    });
+
+    $("#ctnCouvercle").click(function() {
+      $('body').css('overflow', 'auto');
+    });
+
+
+  });
+
+</script>

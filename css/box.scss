@@ -48,7 +48,7 @@ body {
     width: 100vw;
     background: url("../img/fondpage.jpg");
     background-size: 100% 100%;
-    /* overflow: hidden; */
+    overflow: hidden; // Pour empêcher le scroll avant l'ouverture du couvercle. Retiré via Jquery
 }
 
 button {
@@ -143,6 +143,7 @@ button {
   // .flexbottom {}
   // .flexleft {}
   // .flexright {}
+  .item-cube { padding: 0 3rem; }
 }
 
 // Desktop
@@ -151,6 +152,8 @@ button {
   .flexbottom {}
   .flexleft {}
   .flexright {}
+
+  .item-cube { padding: 0;}
 }
 
 
@@ -229,18 +232,22 @@ button {
 .item img { position:relative; display: block; }
 .item {position:relative; align-self:center;}
 
+// classe à ajouter/supprimer en javascript
+
+.scrollbarRemove { overflow:hidden;}
+
+
 // couvercle
 
 #ctnCouvercle>img{
     width:100%;
     height: 100%;
-
 }
 
 #ctnCouvercle{
     position:absolute;
     top:0;
-    z-index:999;
+    z-index:5;
     transform-style: preserve-3d; /* Nécessaire pour transformer tous les enfants */
     cursor:pointer;
 }
@@ -276,13 +283,80 @@ button {
 .couvercleTop {
   position:absolute;
   top:0; left:0; bottom:0;right:0;
-  background: url("../img/couvercle.jpg");
-  background-size: 100% 100%;
 }
 
-// .couvercleTop img{
-// width: 100%;
-// }
+/* --------- Changement titre + image couvercle */
+
+// Smartphone + Tablette
+@media screen and (max-width:1024px) {
+  .couvercleTop {
+    background: url("../img/couvercle_mobile.jpg");
+    background-size: 100% 100%;
+  }
+
+  .couvercleTitre {
+    z-index: 10;
+    position: absolute;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+    color: white;
+    font-weight:bold;
+    font-size: 2.5rem;
+    white-space:nowrap;
+     text-shadow: 2px 2px 4px #000000;
+  }
+
+  .couvercleSousTitre {
+    z-index: 10;
+    position: absolute;
+    margin-top:2rem;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+    color: white;
+    font-size: 1.2rem;
+    white-space:nowrap;
+     text-shadow: 2px 2px 4px #000000;
+  }
+}
+
+// Desktop
+@media screen and (min-width:1024px) {
+  .couvercleTop {
+    background: url("../img/couvercle_desktop.jpg");
+    background-size: 100% 100%;
+  }
+
+  .couvercleTitre {
+    z-index: 10;
+    position: absolute;
+    top: 45%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+    color: white;
+    font-weight:bold;
+    font-size: 10rem;
+    white-space:nowrap;
+     text-shadow: 2px 2px 4px #000000;
+  }
+
+  .couvercleSousTitre {
+    z-index: 10;
+    position: absolute;
+    margin-top:5rem;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+    color: white;
+    font-size: 4.7rem;
+    white-space:nowrap;
+     text-shadow: 2px 2px 4px #000000;
+  }
+
+}
+
+/* -----------------------------------------------*/
 
 .couvercleBord img {
   width: 100%;
@@ -345,7 +419,69 @@ width:100%;
 }
 }
 
+/* -- MODAL --*/
+/* -----------*/
+
+/* The Modal (background) */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 15; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* RESPONSIVE */
+
+// Smartphone + Tablette
+@media screen and (max-width:1024px) {
+  .modal-content {
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  width: 80%;/* Could be more or less, depending on screen size */
+}
+
+}
+
+// Desktop
+@media screen and (min-width:1024px) {
+
+.modal-content {
+  margin: 15% auto; /* 15% from the top and centered */
+  padding:  2.5rem;
+   max-width: 130vh; /* Could be more or less, depending on screen size */
+}
+
+}
 
 
+/* The Close Button */
+#close {
+    color: #aaa;
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+    padding-left: 1rem;
+}
 
-// Fade in image
+#close:hover,
+#close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
