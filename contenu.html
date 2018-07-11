@@ -1,6 +1,6 @@
 <div class="box" id="box">
 
-  <div id="ctnCouvercle" class="couvercleFerme" onclick="this.className='couvercleOuvert';">
+  <div id="ctnCouvercle" class="couvercleFerme" >
     <div class="couvercleTop"></div>
     <span class="couvercleTitre">Box de rentrée</span>
     <span class="couvercleSousTitre">Kit de survie des nouveaux étudiants !</span>
@@ -75,7 +75,15 @@
 <script type="text/javascript">
   $(function() {
 
-      $(this).scrollTop(0); // Retour vers le haut de page au refresh
+    // $("body").scrollTop(0); // Retour vers le haut de page au refresh
+    var t = setTimeout(function(){
+
+     $("body").css("overflow" , "hidden");
+         $("body").scrollTop(0); // Retour vers le haut de page au refresh
+   } , 0);
+   //$("body").css("overflow" , "hidden");
+// console.log("-- " + $('body').css('overflow'));
+// console.log("-- " + $('body').scrollTop());
 
     $('.img-hover img').hover(function() { // Fonction remplacement d'image au hover
       $(this).attr('src', function(index, attr) {
@@ -94,7 +102,7 @@
     $(".item").click(function(e) {
       var objet = e.currentTarget.id.split("-")[1];
       $("#ctnContentModal").load("infos/" + objet + ".html");
-      $("#ctnModal").css('display', 'block');
+      $("#ctnModal").css('display', 'flex');
       $('body').css('overflow', 'hidden'); // NB : enlève le scroll quand modal ouverte
     })
 
@@ -113,6 +121,10 @@
 
     $("#ctnCouvercle").click(function() {
       $('body').css('overflow', 'auto');
+      $("body").scrollTop(0); // Retour vers le haut de page au refresh
+   console.log("++ " + $('body').css('overflow'));
+   console.log("++ " + $('body').scrollTop());
+      document.getElementById("ctnCouvercle").className='couvercleOuvert';
     });
 
 
