@@ -284,6 +284,17 @@ button {
   top:0; left:0; bottom:0;right:0;
 }
 
+.couvercleLangue {
+  color:white;
+    transition: color .5s;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.couvercleLangue:hover {
+  transition: color .5s;
+  color:#3ac1b9;
+  text-shadow: 2px 2px 4px #000000;}
+
 /* --------- Changement titre + image couvercle */
 
 // Smartphone + Tablette
@@ -318,6 +329,20 @@ button {
     white-space:nowrap;
      text-shadow: 2px 2px 4px #000000;
   }
+
+  .couvercleLangue {
+    z-index: 10;
+    position: absolute;
+    margin-top:5rem;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+    color: white;
+    font-size: 1.2rem;
+    font-weight:bold;
+    text-decoration: none;
+  }
+
 }
 
 // Desktop
@@ -351,6 +376,19 @@ button {
     font-size: 4.7rem;
     white-space:nowrap;
      text-shadow: 2px 2px 4px #000000;
+  }
+
+  .couvercleLangue {
+    z-index: 10;
+    position: absolute;
+    margin-top:10rem;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+    color: white;
+    font-size: 3rem;
+    font-weight:bold;
+    text-decoration: none;
   }
 
 }
