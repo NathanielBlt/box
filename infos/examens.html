@@ -10,53 +10,39 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&amp;subset=latin-ext" rel="stylesheet">
     </head>
     <body>
-        <div class="didyouknow">
-            <div> <span class="icon-lightbulb-o" /></div>
-            <div>
-                <p class="didyouknowquestion">Tu es sportif-ve de haut niveau, ou en situation de handicap, et as besoin d'un aménagement de tes examens ?</p>
-                <p style="margin:0;">Pour en bénéficier, il faut s’en occuper dès le début de l’année (va voir le <a href="https://www.univ-lille3.fr/campus/accessibilite/relais-handicap/" target="blank">relais handicap</a> ou le <a href="https://www.univ-lille3.fr/siumpps/" target="blank">centre de santé</a>).</p>
-            </div>
-        </div>
-        <hr class="line" />
         <div class="titre">
             <img src="infos/img/carnet.png" class="titreicone" />
             <div class="titretexte">
-                <h1>Ah ? Des exams ?</h1><br/>
-
-                <h2>À chaque semestre, il faut s'inscrire !</h2></div>
+              <h1 id="ah-des-exams">Ah ? Des exams ?</h1>
+              <h2 id="à-luniversité-on-passe-des-examens-ou-pas">À l’université, on passe des examens… ou pas !</h2></div>
         </div>
         <div class="content">
-    <div class="square">
-            <h3> Exam ou pas ?</h3>
-            Comment savoir si tu vas passer dans l’année supérieure ? Ça dépend, soit on prend en compte toutes tes notes de l’année (ça s'appelle le « <em>contrôle continu</em> » ), soit tu passes des examens, soit on combine les deux. Pour savoir quel est ton cas, il faut aller voir dans le guide des études de ta formation.
-            (Heu, c’est quoi un guide des… ? Regarde, <a href="https://www.univ-lille3.fr/ufr-humanites/guide/" target="blank">ça a cette tête-là</a>).
-    </div>
-            <div>
-              <h3>Inscris-toi !</h3>
-              <span class="icon-arrow-right" />Mais attention ! Le contrôle continu est organisé par ton <a onclick="$('#infoLoad').load('infos/organisation.html');infoMontre();">UFR/faculté</a>, alors que les examens le sont en grande partie par le service de la scolarité (DAEVU). Donc il faut que celui-ci ait tout un tas d’infos te concernant pour te permettre de passer au mieux tes épreuves (tes options, tes notes, tes dispenses, etc.)
-            </div>
-            <div><span class="icon-arrow-right" /> C’est pourquoi il faut s’inscrire aux examens via ton <a href="https://ent.univ-lille3.fr" target="blank">ENT</a> dans l’application « <em>M’inscrire, me réinscrire</em> » Tu ne peux le faire qu’à certaines périodes : consulte ton adresse @etu.univ-lille3.fr.
-            </div>
-            <div>
-              <h3>Si tu n’as pas ton IP, tu n’as pas ton année</h3>
-              Bref, on résume, chaque année on s’inscrit plusieurs fois :
-                  <ul>
-                  <li><span class="icon-link" /><span class="highlight">à l’université</span> au début de l'année (inscription « <em>administrative</em> » , ou « IA » à la <a href="https://masalle.univ-lille3.fr/resultat?marecherche=daevu&numsalle=A3.015" target="blank">DAEVU</a>),</li>
-                  <li><span class="icon-link" /><span class="highlight">aux cours, groupes de TD, etc.</span> chaque semestre  (inscription « <em>pédagogique</em> » ou « IP », dans ton UFR/faculté),</li>
-                  <li><span class="icon-link" /><span class="highlight">aux examens</span> chaque semestre  (dans <a href="https://ent.univ-lille3.fr" target="blank">l'ENT</a>).</li>
-                  </ul>
-                  <a href="https://www.univ-lille3.fr/etudes/faq/inscription-pedagogique-examens/" target="_blank"><button type="button" class="popup_btn"><span class="icon-arrow-circle-o-right" />Ça va ? Tout ça est expliqué plus en détails sur cette page.</button></a>
-                  Sinon, va voir le service des inscriptions et des examens (<a href="https://masalle.univ-lille3.fr/resultat?marecherche=daevu&numsalle=A3.015" target="blank">DAEVU</a>).
-            </div>
-            <div>
-<h3>Et ça se passe quand, tout ça ?</h3>
-              <span class="icon-arrow-right" />Pour les examens, il y a en général une session par semestre, en janvier et en mai. Et si tu n’as pas eu la moyenne, tu as une seconde chance, lors d’une « <em>2<sup>e</sup> session</em> » d'examen (ou <span class="highlight">«&#8239;<em>rattrapage</em>&#8239;»</span>), souvent en juin pour l’ensemble des 2 semestres.
-            </div>
-            <div><span class="icon-arrow-right" />Les périodes d’examen sont déjà sur le <a onclick="$('#infoLoad').load('infos/calendrier.html');infoMontre();">calendrier universitaire</a>. Les dates exactes sont affichées 15 jours avant (à Pont de Bois, <a title="À Pont de Bois, les dates d'examen sont affichées dans la galerie entre les bâtiments A et B." href="https://www.google.fr/maps/@50.6277369,3.1269145,21z" target="blank">c'est là<span class="icon-location" /></a>) , et mises en ligne sur <a href="https://ent.univ-lille3.fr" target="blank">l'ENT</a>. </div>
-            <div><span class="icon-arrow-right" />Attention, trouver des dates d’examen pour 18 000 étudiants est un véritable casse-tête. Ne t’étonne pas si tu as une épreuve le samedi, ou à des heures peu pratiques…
-            </div>
+          <h1 id="ah-des-exams">Ah ? Des exams ?</h1>
+          <h2 id="à-luniversité-on-passe-des-examens-ou-pas">À l’université, on passe des examens… ou pas !</h2>
+          <h3 id="exam-ou-contrôle-continu">Exam ou contrôle continu ?</h3>
+          <div>Comment savoir si tu vas passer dans l’année supérieure ? Ça dépend, soit on prend en compte toutes tes notes de l’année (ça s'appelle le « <em>contrôle continu</em> »), soit tu passes des examens, soit on combine les deux. Pour savoir quel est ton cas, renseigne-toi auprès de tes enseignant·e·s.</div>
+          <h3 id="plusieurs-inscriptions">Plusieurs inscriptions</h3>
+          <div>Chaque année on s’inscrit plusieurs fois :</div>
 
-            <div><span class="icon-attention" /> Quant à <span class="highlight">tricher</span>, ne t’y risque pas, tu n’es plus au lycée. Frauder est un délit qui entraîne de lourdes sanctions. Elles peuvent aller jusqu’à l’exclusion définitive de toutes les universités et écoles…</div>
+          <div><span class="icon-arrow-right" />à l’université au début de l'année (inscription «&#8239;<em>administrative</em>&#8239;» , ou «&#8239;IA&#8239;» : pour tout renseignements, contacte la <a href="https://www.univ-lille.fr/etudes/sinscrire/"  target="_blank">direction de la scolarité</span></a>),</span></div>
+          <div><span class="icon-arrow-right" />aux cours, groupes de TD, etc. chaque semestre (inscription «&#8239;<em>pédagogique</em>&#8239;» ou «&#8239;IP&#8239;», <span class="highlight">dans ton UFR/faculté</span>) : si tu n’as pas ton IP, tu n’as pas ton année !</span></div>
+          <div><span class="icon-arrow-right" /><span class="highlight">aux examens</span> : dans certaines filières, il faut s'inscrire aux examens chaque semestre.</span></div>
+
+          <h3 id="et-ça-se-passe-quand-tout-ça">Et ça se passe quand, tout ça ?</h3>
+
+          <div><span class="icon-arrow-right" />Pour les examens, il y a en général une session par semestre, en janvier et en mai. Et si tu n’as pas eu la moyenne, tu as une seconde chance, lors d’une «&#8239;<em>2<sup>e</sup> session</em>&#8239;» d'examen (ou «&#8239;<em>rattrapage</em>&#8239;»), souvent en juin pour l’ensemble des 2 semestres (en septembre pour certaines filières).</span></div>
+          <div><span class="icon-arrow-right" />Les périodes d’examen sont déjà sur le calendrier universitaire. Les dates exactes sont affichées 15 jours avant sur les campus.</span></div>
+          <div><span class="icon-arrow-right" />Attention, trouver des dates d’examen pour près de 70 000 étudiants est un véritable casse-tête. Ne t’étonne pas si tu as parfois une épreuve le samedi, ou à des heures peu pratiques…</span></div>
+          <div class="square">
+          <div><span class="icon-issue-opened" />Pas de calculs tarabiscotés : travailler régulièrement et dans toutes les matières est la seule façon de réussir ses examens…</span></div>
+          <div><span class="icon-attention" />Quant à tricher, ne t’y risque pas, tu n’es plus au lycée. Frauder est un délit qui entraîne de lourdes sanctions. Elles peuvent aller jusqu’à l’exclusion définitive de toutes les universités et écoles…</span></div></div>  </div>
+  <div class="didyouknow">
+      <div> <span class="icon-lightbulb-o" /></div>
+      <div>
+          <p class="didyouknowquestion">Bon, faire le calendrier de l’université, ça ne doit pas être bien compliqué, non ?</p>
+          <p style="margin:0;">En fait, ça prend des semaines ! Parce que tout le monde est concerné, et que si tu bouges une date d'un jour ou deux, il y a des répercussions en chaîne sur plein de choses à d'autres moments de l'année…</p>
+      </div>
   </div>
+
     </body>
 </html>
