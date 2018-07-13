@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "boxrentree";
+  src:url("fonts/boxrentree.eot");
+  src:url("fonts/boxrentree.eot?#iefix") format("embedded-opentype"),
+    url("fonts/boxrentree.woff") format("woff"),
+    url("fonts/boxrentree.ttf") format("truetype"),
+    url("fonts/boxrentree.svg#boxrentree") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "boxrentree" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "boxrentree" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-right:before {
+  content: "\61";
+}
+.icon-arrow-circle-o-right:before {
+  content: "\62";
+}
+.icon-lightbulb-o:before {
+  content: "\63";
+}
+.icon-link:before {
+  content: "\64";
+}
+.icon-certificate:before {
+  content: "\65";
+}
+.icon-arrow-circle-right:before {
+  content: "\66";
+}
+.icon-compass:before {
+  content: "\67";
+}
+.icon-paperclip:before {
+  content: "\68";
+}
+.icon-issue-opened:before {
+  content: "\6a";
+}
+.icon-attention:before {
+  content: "\69";
+}
+.icon-location:before {
+  content: "\6b";
+}
+.icon-pinboard:before {
+  content: "\6c";
+}
