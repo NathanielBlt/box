@@ -4,7 +4,7 @@
     <div class="couvercleTop"></div>
     <span class="couvercleTitre">The Starter Box</span>
     <span class="couvercleSousTitre">Survival kit for new students !</span>
-    <a href="../index.html" type="button" class="couvercleLangue">Box française</a>
+    <a href="en/index.html" type="button" class="couvercleLangue">Box française</a>
     <div class="couvercleBord"><img src="img/bord_couvercle.png" /></div>
   </div>
 
@@ -76,15 +76,11 @@
 <script type="text/javascript">
   $(function() {
 
-    // $("body").scrollTop(0); // Retour vers le haut de page au refresh
-    var t = setTimeout(function(){
+    $(window).on('beforeunload', function() {
+      $(window).scrollTop(0);
+    });
 
-     $("body").css("overflow" , "hidden");
-         $("body").scrollTop(0); // Retour vers le haut de page au refresh
-   } , 0);
-   //$("body").css("overflow" , "hidden");
-// console.log("-- " + $('body').css('overflow'));
-// console.log("-- " + $('body').scrollTop());
+    $("body").css("overflow", "hidden");
 
     $('.img-hover img').hover(function() { // Fonction remplacement d'image au hover
       $(this).attr('src', function(index, attr) {
@@ -96,10 +92,10 @@
       });
     });
 
-// ctnModal = l'ID de la modale complète
-// ctnContentModal = l'ID du contenu de la modale
+    // ctnModal = l'ID de la modale complète
+    // ctnContentModal = l'ID du contenu de la modale
 
-    //**** JY : ecouteur pour onclick item
+    //**** Ecouteur pour onclick item
     $(".item").click(function(e) {
       var objet = e.currentTarget.id.split("-")[1];
       $("#ctnContentModal").load("infos/" + objet + ".html");
@@ -109,10 +105,11 @@
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
-    if (event.target == document.getElementById("ctnModal")) {
+      if (event.target == document.getElementById("ctnModal")) {
         $("#ctnModal").css('display', 'none');
-        $('body').css('overflow', 'auto');  // Réactivation du scroll sur la page
-    }}
+        $('body').css('overflow', 'auto'); // Réactivation du scroll sur la page
+      }
+    }
 
     // When the user clicks on <button> (x), close the modal
     $("#close").click(function() {
@@ -122,13 +119,8 @@
 
     $("#ctnCouvercle").click(function() {
       $('body').css('overflow', 'auto');
-      $("body").scrollTop(0); // Retour vers le haut de page au refresh
-   console.log("++ " + $('body').css('overflow'));
-   console.log("++ " + $('body').scrollTop());
-      document.getElementById("ctnCouvercle").className='couvercleOuvert';
+      document.getElementById("ctnCouvercle").className = 'couvercleOuvert';
     });
 
-
   });
-
 </script>
