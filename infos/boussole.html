@@ -10,46 +10,54 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&amp;subset=latin-ext" rel="stylesheet">
     </head>
     <body>
-        <div class="didyouknow">
-            <div> <span class="icon-lightbulb-o" /></div>
-            <div>
-                <p class="didyouknowquestion">Si on te dit <span class="titrehighlight">307</span>, tu penses à quoi ?</p>
-                <p style="margin:0;">C’est le nombre de salles de cours qui se trouvent sur le campus de Pont de bois ! Renversant non ?</p>
-            </div>
-        </div>
-        <div class="line" />
+
         <div class="titre">
             <img src="infos/img/boussole.png" class="titreicone" />
             <div class="titretexte">
-                <h1>Tu as peur de te perdre ?</h1><br/>
-                <h2>Rassure-toi, on a pensé à tout !</h2></div>
+              <h1 id="un-peu-perdue">Un peu perdu·e ?</h1>
+              <h3 id="rassure-toi-on-a-pensé-à-tout">Rassure-toi, on a pensé à tout !</h3></div>
         </div>
         <div class="content">
-          <div>L’Université de Lille – sciences humaines et sociales, c’est <span class="highlight">4 sites</span> sur lesquels tu disposes de lieux d’enseignement et de vie étudiante, ainsi que différents <a onclick="$('#infoLoad').load('infos/canif.html');infoMontre();">services</a> pour t'aider.</div>
 
-          <div>Pour te repérer, des <span class="highlight">personnes et des outils</span> sont à ta disposition.
-                Des point d’accueil et d’information se trouvent sur chacun des sites de l’université, tu y trouveras des <span class="highlight">personnes</span> pour t'orienter mais aussi des <span class="highlight">plans papier</span> pour te repérer !
-                Sur le site de Pont de Bois, il y a un <span class="highlight"><a href="http://www.openstreetmap.org/?mlat=50.62772&mlon=3.12696#map=19/50.62772/3.12696" target="_blank">accueil central</a></span> et un <a href="http://www.openstreetmap.org/?mlat=50.62701&mlon=3.12674#map=19/50.62701/3.12674" target="_blank">accueil « scolarité »</a> au premier étage de la Maison de l’étudiant.
-                <br/><a href="https://www.univ-lille3.fr/universite/infos-pratiques/accueil/" target="_blank"><button type="button" class="popup_btn"><span class="icon-arrow-circle-o-right" />Consulter les informations relatives à ces points d’accueil.</button></a>
-                <br/>
-                Ton <a onclick="$('#infoLoad').load('infos/organisation.html');infoMontre();">UFR</a> t’ouvre également ses portes selon des modalités d’accueil spécifiques. Pour les connaître, rendez-vous sur le site :
-                <br/><a href="https://www.univ-lille3.fr/universite/fonctionnement/composantes-de-formation/" target="blank"><button type="button" class="popup_btn"><span class="icon-arrow-circle-o-right" />Identifier les accueils en composantes</button></a></div>
+          <div>L’Université de Lille, ce sont cinq campus qui sont parfois de véritables petites villes, avec des salles de cours, laboratoires, bibliothèques, complexes sportifs, cafés, lieux de spectacle, potagers… mais aussi plein de services pour t’aider. (Chiffres-clés ?)</div>
+
+          <div><span class="icon-arrow-right" />Si tu as pu suivre une des visites de campus lors des journées d’immersion de la rentrée (les <a href="http://jive.univ-lille.fr/"  target="_blank">« Jivé »</span></a>), c’est très bien. Sinon, des points d’accueil et d’information ou des personnes pour t’orienter se trouvent sur chacun des sites de l’université.</span></div>
+          <div><span class="icon-arrow-right" />Les campus sont parfois très grands : au début de l’année, prévois du temps pour repérer l’accueil de ton secrétariat pédagogique et tes salles de cours.</span></div>
+          <div><a href="https://www.univ-lille.fr/fileadmin/user_upload/illustrations/plans/Plan-campus-Zcard-Ulille-420x330mm-web.pdf"  target="_blank"><button type="button" class="popup_btn"><span class="icon-arrow-circle-o-right" />Plan général de l’université</span></button></a></div>
+
+          <div>Tu connais le nom de ta faculté/UFR ? (voir dans l'onglet « Contacts » de la <a href="https://www.univ-lille.fr/index.php?id=323"  target="_blank">fiche de ta formation</span></a>), Pour savoir où elle se trouve, clique sur les liens suivants :</div>
+
+          <div><span class="icon-location" /><a href="https://www.openstreetmap.org/#map=19/50.63138/3.07512"  target="_blank">Siège de l’Université de Lille</span></a></span></div>
+
+          <h3 id="campus-cité-scientifique">Campus Cité scientifique</h3>
+
+          <div><span class="icon-location" />Facultés des <a href="https://www.openstreetmap.org/#map=19/50.61236/3.14141"  target="_blank">sciences et technologies</span></a> (FST) et des <a href="https://www.openstreetmap.org/#map=19/50.61048/3.14274"  target="_blank">sciences économiques et sociales</span></a> (FSES), UFR de <a href="https://www.openstreetmap.org/#map=19/50.60774/3.14563"  target="_blank">géographie et d'aménagement</span></a>, département <a href="https://www.openstreetmap.org/#map=19/50.60518/3.13365"  target="_blank">sciences de l’éducation et de la formation des adultes</span></a> (SEFA), écoles d'ingénieurs <a href="https://www.openstreetmap.org/#map=19/50.60776/3.13628"  target="_blank">Polytech’Lille</span></a> et <a href="https://www.openstreetmap.org/#map=19/50.61115/3.13457"  target="_blank">Institut Mines - Télécom</span></a>, et <a href="https://www.openstreetmap.org/#map=19/50.61368/3.13665"  target="_blank">institut universitaire de technologie A</span></a> (IUT A − également sur le <a href="https://www.openstreetmap.org/#map=18/50.64822/3.15685"  target="_blank">site du Recueil</span></a> à Villeneuve d'Ascq)</span></div>
+          <div><span class="icon-location" />Rattachée au campus, l'école universitaire de management (<a href="https://www.openstreetmap.org/#map=19/50.64630/3.06215"  target="_blank">IAE</span></a>) se trouve à Lille.</span></div>
+
+          <h3 id="campus-moulins-ronchin">Campus Moulins-Ronchin</h3>
+
+          <div><span class="icon-location" />Facultés de <a href="https://www.openstreetmap.org/#map=19/50.61887/3.07029"  target="_blank">finances, banque, comptabilité</span></a> / marketing et du management de la distribution (FFBC/IMMD), des <a href="https://www.openstreetmap.org/#map=19/50.61890/3.06944"  target="_blank">sciences juridiques, politiques et sociales</span></a> (FSJPS – également à <a href="https://www.openstreetmap.org/#map=19/50.18934/3.24585"  target="_blank">Cambrai : centre universitaire « La Forêt »</span></a>) et des <a href="https://www.openstreetmap.org/#map=19/50.61178/3.08352"  target="_blank">sciences du sport et de l’éducation physique</span></a> (FSSEP)</span></div>
+
+          <h3 id="campus-pont-de-bois">Campus Pont-de-Bois</h3>
+
+          <div><span class="icon-location" />Facultés des <a href="https://www.openstreetmap.org/node/5649690497"  target="_blank">humanités</a> (sauf la filière arts plastiques), des langues, littératures et civilisations étrangères (LLCE − <a href="https://www.univ-lille3.fr/ufr-llce/presentation/secretariats/"  target="_blank">contacts</a>), des <a href="https://www.openstreetmap.org/#map=19/50.62825/3.12519"  target="_blank">sciences historiques, artistiques et politiques</a> (Shap), UFR <a href="https://www.openstreetmap.org/node/5649690498" target="_blank">développement social, éducation, culture, communication, information, documentation</a> (Deccid), UFR <a href="https://www.openstreetmap.org/node/5649690495" target="_blank">mathématiques, informatique, management et économie</span></a> (Mime), UFR de <a href="https://www.openstreetmap.org/node/5649690494"  target="_blank">psychologie</a>.</span></div>
+          <div><span class="icon-location" />Un <a href="https://masalle.univ-lille3.fr/"  target="_blank">site web</span></a> permet de <span class="highlight">trouver sa salle</span> plus rapidement quand on a son numéro.</span></div>
+
+          <h3 id="campus-roubaix-tourcoing">Campus Roubaix-Tourcoing</h3>
+
+          <div><span class="icon-location" />Roubaix : faculté de finances, banque, comptabilité / <a href="https://www.openstreetmap.org/#map=19/50.69744/3.16478"  target="_blank">institut du marketing et du management de la distribution</span></a> (FFBC/IMMD), <a href="https://www.openstreetmap.org/#map=19/50.69677/3.16507"  target="_blank">institut universitaire de technologie C</span></a> (IUT C), UFR Deccid − département <a href="https://www.openstreetmap.org/#map=19/50.68870/3.17956"  target="_blank">Infocom</span></a>, UFR de <a href="https://www.openstreetmap.org/#map=19/50.69744/3.16478"  target="_blank">langues étrangères appliquées</span></a> (LEA)</span></div>
+          <div><span class="icon-location" />Tourcoing : faculté des humanités − filière <a href="https://www.openstreetmap.org/node/5264105857"  target="_blank">arts plastiques</span></a>, <a href="https://www.openstreetmap.org/way/78657468"  target="_blank">institut universitaire de technologie B</span></a> (IUT B)</span></div>
+
+          <h3 id="campus-santé">Campus Santé</h3>
+
+          <div><span class="icon-location" />Facultés de <a href="https://www.openstreetmap.org/#map=19/50.61429/3.03687"  target="_blank">chirurgie dentaire</span></a>, de <a href="https://www.openstreetmap.org/#map=18/50.60413/3.03064"  target="_blank">médecine</span></a>, de <a href="https://www.openstreetmap.org/#map=19/50.60504/3.04024"  target="_blank">pharmacie</span></a>, et <a href="https://www.openstreetmap.org/#map=19/50.60356/3.03004"  target="_blank">d’ingénierie et de management de la santé</span></a> (Ilis).</span></div>
+
+        </div>
+        <div class="didyouknow">
+            <div> <span class="icon-lightbulb-o" /></div>
             <div>
-                Pour le campus de Pont de Bois, une application «&#8239;Trouver ma salle&#8239;» est disponible dans ton ENT, ou <a href="https://masalle.univ-lille3.fr/" target="blank">directement ici</a>.
-            </div>
-            <div>
-                Un dernier conseil, le campus de Pont-de-bois est grand : <a href="https://inforum.univ-lille3.fr/2013/03/precisions-sur-la-signaletique-a-lille-3/" target="blank">décode la signalétique existante</a> pour comprendre l’organisation des bâtiments, les numéros de salles, et trouver ton chemin plus facilement.
-            </div><div>
-                Tu es étudiant-e en situation de handicap ?  Le relais handicap est à ta disposition pour te proposer une visite intégrant l’accessibilité des locaux et des espaces exterieurs ! <span class="highlight">Contacte-nous vite !</span>
-            </div>
-            <div class="square">
-                <h3><span class="icon-pinboard" />Quelques documents utiles</h3>
-                <ul>
-                    <li><a href="https://www.univ-lille3.fr/universite/infos-pratiques/itineraires/"  class="icon-link">Plan du campus Pont de Bois à Villeneuve d'Ascq</a></li>
- <li class="icon-link">Plans des autres campus à Roubaix (<a href="https://www.univ-lille3.fr/ufr-lea/venir-aux-lea/"  target="blank">UFR LEA</a> et <a href="https://www.univ-lille3.fr/ufr-deccid/infocom/infos-pratiques/"  target="blank">département Infocom</a>) et à Tourcoing (<a href="http://www.plaine-images.fr/acces-trouver/"  target="blank">Plaine Images</a>, <a href="http://www.iut.univ-lille3.fr/index.php/infos-pratiques/venir-a-liut-tourcoing/"  target="blank">IUT</a> et <a href="https://www.google.fr/maps/place/D%C3%A9partement+Arts+Plastiques/@50.7212141,3.15095,17z/data=!4m12!1m6!3m5!1s0x47c32ed4ea007f47:0xa23596e752e4f17c!2sD%C3%A9partement+Arts+Plastiques!8m2!3d50.7212141!4d3.153144!3m4!1s0x47c32ed4ea007f47:0xa23596e752e4f17c!8m2!3d50.7212141!4d3.153144"  target="blank">pôle arts plastiques</a>)</li>
-                    <li><a href="http://www.univ-lille2.fr/plans-dacces.html"  target="_blank" class="icon-link">Plans de l'Université de Lille − droit et santé</a></li>
-                    <li><a href="http://www.univ-lille1.fr/Accueil/plan-acces/"  target="_blank" class="icon-link">Plans de l'Université de Lille − sciences et technologies</a></li>
-                </ul>
+                <p class="didyouknowquestion">Tu es étudiant-e en situation de handicap ?</p>
+                <p style="margin:0;">Le <a href="https://www.univ-lille.fr/vie-des-campus/etudes-et-handicap/" target="_blank">bureau de la vie étudiante et du handicap</a> est à ta disposition pour te renseigner sur l’accessibilité des locaux et des espaces extérieurs !</p>
             </div>
         </div>
     </body>
