@@ -505,6 +505,16 @@ width:100%;
 
 }
 
+//Desktop HD
+
+@media screen and (min-width:1600px) {
+
+.modal {
+ align-items: center; /*<---- Fait bugger quand popup trop grande*/
+}
+}
+
+
 
 /* The Close Button */
 #close {
