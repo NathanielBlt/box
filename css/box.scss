@@ -385,9 +385,26 @@ button {
 
 /* -----------------------------------------------*/
 
+.couvercleBord {position:relative;}
+
 .couvercleBord img {
   width: 100%;
 }
+
+.couvercleBtn img {
+    padding: 1em;
+    height: 100%;
+}
+
+.couvercleBtn {
+  position: absolute;
+  display: flex;
+  top: 0;
+  height: 90%;
+  left: 30%;
+  width: 20%;
+}
+
 
 .couvercleFerme{ /* Position de base des éléments */
   transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
