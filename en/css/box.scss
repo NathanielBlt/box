@@ -350,7 +350,7 @@ button {
     transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
     color: white;
     font-weight:bold;
-    font-size: 10rem;
+    font-size: 7rem;
     white-space:nowrap;
      text-shadow: 2px 2px 4px #000000;
   }
@@ -363,7 +363,7 @@ button {
     left: 50%; /* position the left edge of the element at the middle of the parent */
     transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
     color: white;
-    font-size: 4.7rem;
+    font-size: 3.3rem;
     white-space:nowrap;
      text-shadow: 2px 2px 4px #000000;
   }
@@ -489,14 +489,14 @@ width:100%;
 @media screen and (min-width:1024px) {
 
 .modal {
-  justify-content: center;
-  align-items: center;
+//  justify-content: center;
+ //align-items: center; <---- Fait bugger quand popup trop grande
 }
 
 .modal-content {
   // margin: 2% auto; /* 15% from the top and centered */
   padding:  2.5rem;
-  margin: 15% auto;
+  margin: 2% auto;
   overflow: auto;
   min-width: 60vw;
   max-width: 70vw;
@@ -504,6 +504,16 @@ width:100%;
 }
 
 }
+
+//Desktop HD
+
+@media screen and (min-width:1600px) {
+
+.modal {
+ align-items: center; /*<---- Fait bugger quand popup trop grande*/
+}
+}
+
 
 
 /* The Close Button */
