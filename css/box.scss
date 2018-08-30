@@ -391,20 +391,62 @@ button {
   width: 100%;
 }
 
-.couvercleBtn img {
-    padding: 1em;
-    height: 100%;
-}
-
 .couvercleBtn {
   position: absolute;
   display: flex;
+  height:100%;
+  width:100%;
   top: 0;
-  height: 90%;
-  left: 30%;
-  width: 20%;
+  justify-content: center;
+  align-items: flex-start;
 }
 
+.couvercleBtnEl, .couvercleBtnElStart, .couvercleBtnElEnd  {
+  display:flex;
+  padding: 0 1em;
+  height:100%;
+  flex: 1 1 auto;
+}
+
+.couvercleBtnElStart { align-self: flex-start; margin-left: 5%; }
+
+.couvercleBtnElEnd { align-self: flex-end; flex:3; margin-right: 5%; }
+
+.couvercleBtnEl img, .couvercleBtnElStart img, .couvercleBtnElEnd img {
+  padding: 0.5em;
+  width: 100%;
+}
+
+/* Responsive elements */
+
+// Smartphone + Tablette
+@media screen and (max-width:1024px) {
+
+  .couvercleBtnEl img{
+    padding: 0 0 10% 0;
+  }
+
+}
+
+// Desktop
+@media screen and (min-width:1024px) {
+  .couvercleBtnEl img{
+    padding: 25%;
+  }
+
+}
+
+
+// Desktop HD
+@media screen and (min-width:1600px) {
+  .couvercleBtnEl img{
+    padding: 25%;
+  }
+
+}
+
+
+/* ------ */
 
 .couvercleFerme{ /* Position de base des éléments */
   transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
