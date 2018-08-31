@@ -26,47 +26,52 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+  src: url("fonts/OpenSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+  src: url("fonts/OpenSans-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Light.ttf") format("truetype");
+  src: url("fonts/OpenSans-Light.ttf") format("truetype");
   font-weight: lighter;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans Condensed";
-  src: url("../fonts/OpenSansCondensed-Bold.ttf") format("truetype");
+  src: url("fonts/OpenSansCondensed-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans Condensed";
-  src: url("../fonts/OpenSansCondensed-Light.ttf") format("truetype");
+  src: url("fonts/OpenSansCondensed-Light.ttf") format("truetype");
   font-weight: lighter;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans Condensed";
-  src: url("../fonts/OpenSansCondensed-LightItalic.ttf") format("truetype");
+  src: url("fonts/OpenSansCondensed-LightItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 
 /*-------------------------------*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 
 h1, h2, h3 {
   color: #ae2573;
@@ -215,7 +220,7 @@ ul, li {
   }
 
   .didyouknow>div>p:nth-child(2){
-    font-size:0.75em;
+    font-size:1em;
   }
 
   .didyouknowquestion {
