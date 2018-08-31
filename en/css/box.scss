@@ -275,7 +275,7 @@ button {
 }
 
 .couvercleLangue {
-  color:white;
+    color:white;
     transition: color .5s;
     text-shadow: 2px 2px 4px #000000;
 }
@@ -304,7 +304,7 @@ button {
     font-weight:bold;
     font-size: 2.5rem;
     white-space:nowrap;
-     text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #000000;
   }
 
   .couvercleSousTitre {
@@ -317,7 +317,7 @@ button {
     color: white;
     font-size: 1.2rem;
     white-space:nowrap;
-     text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #000000;
   }
 
   .couvercleLangue {
@@ -352,7 +352,7 @@ button {
     font-weight:bold;
     font-size: 7rem;
     white-space:nowrap;
-     text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #000000;
   }
 
   .couvercleSousTitre {
@@ -365,7 +365,6 @@ button {
     color: white;
     font-size: 3.3rem;
     white-space:nowrap;
-     text-shadow: 2px 2px 4px #000000;
   }
 
   .couvercleLangue {
@@ -385,75 +384,55 @@ button {
 
 /* -----------------------------------------------*/
 
-.couvercleBord {position:relative;}
+.couvercleBord {}
 
-.couvercleBord img {
+.couvercleBord > img {
   width: 100%;
 }
 
 .couvercleBtn {
   position: absolute;
+  z-index:20;
   display: flex;
   height:100%;
   width:100%;
   top: 0;
-  justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  list-style: none;
 }
 
 .couvercleBtnEl, .couvercleBtnElStart, .couvercleBtnElEnd  {
-  display:flex;
-  padding: 0 1em;
-  height:100%;
-  flex: 1 1 auto;
+  padding: 2%;
+//  height:100%;
+  // flex: 1 1 30%;
+  text-align: center;
 }
 
-.couvercleBtnElStart { align-self: flex-start; margin-left: 5%; }
+.couvercleBtnElStart { flex:1 1 25%; margin-left: 5%; }
+.couvercleBtnElEnd { flex:1 1 45%; margin-right: 5%; }
 
-.couvercleBtnElEnd { align-self: flex-end; flex:3; margin-right: 5%; }
+.couvercleBtnEl { flex: 1 1 15%; }
 
-.couvercleBtnEl img, .couvercleBtnElStart img, .couvercleBtnElEnd img {
-  padding: 0.5em;
-  width: 100%;
-}
+.couvercleBtnEl a {position:relative; display:block; z-index:30; background-color: transparent; cursor:pointer;}
 
-/* Responsive elements */
-
-// Smartphone + Tablette
-@media screen and (max-width:1024px) {
-
-  .couvercleBtnEl img{
-    padding: 0 0 10% 0;
-  }
-
-}
-
-// Desktop
-@media screen and (min-width:1024px) {
-  .couvercleBtnEl img{
-    padding: 25%;
-  }
-
-}
+.couvercleBtnEl img, .couvercleBtnElStart img, .couvercleBtnElEnd img { height: 100%; width: 100%;}
+ .couvercleBtnEl img{  }
 
 
-// Desktop HD
-@media screen and (min-width:1600px) {
-  .couvercleBtnEl img{
-    padding: 25%;
-  }
-
-}
+ // Smartphone + Tablette
+ @media screen and (max-width:768px) {
+   .couvercleBtnElEnd img {display:none;}
+ }
 
 
 /* ------ */
 
 .couvercleFerme{ /* Position de base des éléments */
-  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  -moz-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  -webkit-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  -o-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  -ms-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(1px);
+  -moz-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(1px);
+  -webkit-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(1px);
+  -o-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(1px);
+  -ms-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(1px);
   perspective: 3500px;-webkit-perspective: 3500px; perspective-origin: 80% 80%; -webkit-perspective-origin: 80% 80%;
 }
 
@@ -503,6 +482,40 @@ width:100%;
         -ms-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
 }
 }
+
+/* -- BORD BAS - BOUTONS --*/
+/* -----------*/
+
+.bord-bas { position: relative;}
+
+.bord-basBtn {
+  position:absolute;
+  display: flex;
+  justify-content:center;
+  align-content:center;
+  max-height: 100%;
+  width:100%;
+}
+
+.bord-basBtnflex { flex:1 100%; }
+
+.bord-basBtnflex a { display:block; height: 100%; text-align: center;}
+
+.bord-basBtnflex img { height: 60%;}
+
+// Smartphone
+@media screen and (max-width:768px) {
+  .bord-basBtnflex img { height: 2em; padding-top:10%}
+}
+
+// Smartphone + Tablette
+@media screen and (max-width:1024px) {
+
+  .bord-basBtnflex { flex:1 1 50%; }
+  .bord-basBtn {padding: 0% 0% 25%;}
+
+}
+
 
 /* -- MODAL --*/
 /* -----------*/
