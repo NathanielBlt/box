@@ -384,12 +384,6 @@ button {
 
 /* -----------------------------------------------*/
 
-.couvercleBord {}
-
-.couvercleBord > img {
-  width: 100%;
-}
-
 .couvercleBtn {
   position: absolute;
   z-index:20;
@@ -428,17 +422,18 @@ button {
 /* ------ */
 
 .couvercleFerme{ /* Position de base des éléments */
-  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(1px);
-  -moz-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(1px);
-  -webkit-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(1px);
-  -o-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(1px);
-  -ms-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(1px);
+  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0px);
+  -moz-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0px);
+  -webkit-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0px);
+  -o-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0px);
+  -ms-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0px);
   perspective: 3500px;-webkit-perspective: 3500px; perspective-origin: 80% 80%; -webkit-perspective-origin: 80% 80%;
 }
 
 
 .couvercleOuvert{
     animation : ouvre3D 2s ease 0s 1 forwards;
+     transition-timing-function: ease-in-out;
 }
 
 $translate: 10px; //old: -39px;
@@ -446,7 +441,7 @@ $translate: 10px; //old: -39px;
 .couvercleBord {
 position:absolute;
 bottom: 0;
-width:100%;
+width:auto;
 
  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(-90deg) translateX(0px) translateZ( $translate ) translateY(50%);
   -moz-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(-90deg) translateX(0px) translateZ( $translate ) translateY(50%);
@@ -455,12 +450,10 @@ width:100%;
   -ms-transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(-90deg) translateX(0px) translateZ( $translate )translateY(50%);
 }
 
-.couvercleBordAnim {
- animation: DecalBord 2s ease 0s 1 forwards;
+
+.couvercleBord > img {
+  width: 100%;
 }
-
-
-
 
 @keyframes ouvre3D {
     0%{
