@@ -1,3 +1,6 @@
+MENU DÉROULANT POUR boussole.html
+
+
 <nav role="navigation" class="nav">
   <ul class="menu">
     <li class="menu-item has-children"><a href="#">Campus Cité scientifique<span class="dropdown-icon"></span></a>
@@ -51,5 +54,3 @@
     </li>
   </ul>
 </nav>
-
-
