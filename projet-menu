@@ -1,0 +1,55 @@
+<nav role="navigation" class="nav">
+  <ul class="menu">
+    <li class="menu-item has-children"><a href="#">Campus Cité scientifique<span class="dropdown-icon"></span></a>
+      <ul class="sub-menu">
+          <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.61232/3.14129"  target="_blank">Faculté des sciences et technologies</a> (FST)</li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.61055/3.14279"  target="_blank">Faculté des sciences économiques et sociales</a> (FSES)</li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.60779/3.14558"  target="_blank">UFR de géographie et d'aménagement</a></li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.60518/3.13365"  target="_blank">Département des sciences de l’éducation et de la formation des adultes</a> (SEFA)</li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.60774/3.13635"  target="_blank">Polytech’Lille</a></li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.61123/3.13437"  target="_blank">Institut Mines - Télécom</a></li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.61368/3.13656"  target="_blank">Institut universitaire de technologie A</a> (IUT A)</li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.64827/3.15692"  target="_blank">IUT A, départements chimie, génie mécanique et productique</a> (site du Recueil à Villeneuve d'Ascq)</li>
+          <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.64656/3.06215"  target="_blank">école universitaire de management</a>) (IAE − à Lille)</li>
+      </ul>
+    </li>
+	    <li class="menu-item has-children"><a href="#">Campus Moulins-Ronchin<span class="dropdown-icon"></span></a>
+      <ul class="sub-menu">
+          <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.61887/3.07029"  target="_blank">Faculté de finances, banque, comptabilité</a> / marketing et du management de la distribution (FFBC/IMMD)</li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.61890/3.06944"  target="_blank">Faculté des sciences juridiques, politiques et sociales</a> (FSJPS)</li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.18934/3.24585"  target="_blank">FSJPS − centre universitaire « La Forêt »</a>) (Cambrai)</li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.61185/3.08314"  target="_blank">Faculté des sciences du sport et de l’éducation physique</a> (FSSEP)</li>
+		        </ul>
+    </li>
+    <li class="menu-item has-children"><a href="#">Campus Pont-de-Bois<span class="dropdown-icon"></span></a>
+      <ul class="sub-menu">
+        <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.62831/3.12543"  target="_blank">Faculté des humanités</a> (sauf la filière arts plastiques)</li>
+        <li class="menu-item"><a href="https://www.univ-lille3.fr/ufr-llce/presentation/secretariats/"  target="_blank">Faculté des des langues, littératures et civilisations étrangères</a> (LLCE)</li>
+        <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.62825/3.12519"  target="_blank">Faculté des sciences historiques, artistiques et politiques</a> (Shap)</li>
+        <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.62830/3.12759" target="_blank">UFR développement social, éducation, culture, communication, information, documentation</a> (Deccid − sauf Infocom)</li>
+        <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.62779/3.12312" target="_blank">UFR mathématiques, informatique, management et économie</span></a> (Mime)</li>
+        <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.62683/3.12671"  target="_blank">UFR de psychologie</a></li>
+      </ul>
+    </li>
+  <li class="menu-item has-children"><a href="#">Campus Roubaix-Tourcoing<span class="dropdown-icon"></span></a>
+      <ul class="sub-menu">
+		  <li class="menu-item">Faculté de finances, banque, comptabilité / <a href="https://www.openstreetmap.org/#map=18/50.69737/3.16501"  target="_blank">institut du marketing et du management de la distribution</a> (FFBC/IMMD)</li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.69677/3.16507"  target="_blank">Institut universitaire de technologie C</a> (IUT C − Roubaix)</li>
+		  <li class="menu-item">UFR Deccid − département <a href="https://www.openstreetmap.org/#map=19/50.68871/3.17940"  target="_blank">Infocom</a></li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=18/50.69737/3.16501"  target="_blank">UFR de langues étrangères appliquées</a> (LEA)</li>
+          <li class="menu-item">Faculté des humanités <a href="https://www.openstreetmap.org/#map=19/50.72058/3.15569"  target="_blank">filière arts plastiques</a> (Tourcoing)</li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.72484/3.16478"  target="_blank">Institut universitaire de technologie B</a> (IUT B − Tourcoing)</li>
+      </ul>
+    </li>
+    <li class="menu-item has-children"><a href="#">Campus Santé<span class="dropdown-icon"></span></a>
+      <ul class="sub-menu">
+          <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.61421/3.03755"  target="_blank">Faculté de chirurgie dentaire</a></li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.60414/3.03111"  target="_blank">Faculté de médecine</a></li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.60508/3.04003"  target="_blank">Faculté de pharmacie</a></li>
+		  <li class="menu-item"><a href="https://www.openstreetmap.org/#map=19/50.60364/3.02995"  target="_blank">Faculté d’ingénierie et de management de la santé</a> (Ilis)</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
