@@ -536,31 +536,34 @@ ul, li {
   }
 }
 .nav {
-  background-color: black;
+  background-color: #007a7c;
 }
 .nav .menu > .menu-item,
 .nav .menu > .menu-item .dropdown-icon {
   border-color: rgba(255, 255, 255, 0.1);
 }
-.nav .menu > .menu-item, .nav .menu > .menu-item > a {
-  color: #ddd;
+.nav .menu > .menu-item {
+  color: black;
+}
+.nav .menu > .menu-item > a {
+  color: #fff;
 }
 .nav .menu > .menu-item > a:hover, .nav .menu > .menu-item > a:active, .nav .menu > .menu-item > a:focus {
-  background-color: #07c;
+  background-color: #3cb0fd;
   color: #fff;
 }
 .nav .sub-menu {
-  background-color: #eee;
+  background-color: #fff;
 }
 .nav .sub-menu,
 .nav .sub-menu .dropdown-icon,
 .nav .sub-menu .menu-item,
 .nav .sub-menu .menu-item .dropdown-icon {
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.7);
 }
 .nav .sub-menu .menu-item,
 .nav .sub-menu .menu-item a {
-  color: #222;
+  coloor: #222;
 }
 .nav .sub-menu .menu-item a:hover, .nav .sub-menu .menu-item a:active, .nav .sub-menu .menu-item a:focus {
   background-color: white;
