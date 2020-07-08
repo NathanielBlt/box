@@ -168,7 +168,7 @@ ul, li {
   margin-right: 0.25em;
 }
 
-.icon-arrow-right {
+.icon-arrow-right:before {
   font-size: 1.2em;
   vertical-align: middle;
   color: #ae2573;
@@ -347,7 +347,7 @@ ul, li {
   margin-left: 1em;
 }
 
-.content div {
+.content div, .content p {
   margin-bottom: 0.75em;
   -webkit-column-break-inside: avoid;
   -moz-column-break-inside: avoid;
